@@ -1,1 +1,1 @@
-Example copied from Arist Firebase 
+Example copied Youtube AristDevs Firebase 
