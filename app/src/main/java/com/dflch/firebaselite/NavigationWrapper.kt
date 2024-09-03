@@ -7,9 +7,10 @@ import androidx.navigation.compose.composable
 import com.dflch.firebaselite.presentation.initial.InitialScreen
 import com.dflch.firebaselite.presentation.login.LoginScreen
 import com.dflch.firebaselite.presentation.singup.SingUpScreen
+import com.google.firebase.auth.FirebaseAuth
 
 @Composable
-fun NavigationWrapper(navHostController: NavHostController) {
+fun NavigationWrapper(navHostController: NavHostController, auth: FirebaseAuth) {
 
     NavHost(
         navController = navHostController,
@@ -24,11 +25,11 @@ fun NavigationWrapper(navHostController: NavHostController) {
         }
 
         composable("login") {
-            LoginScreen()
+            LoginScreen(auth)
         }
 
         composable("singUp") {
-            SingUpScreen()
+            SingUpScreen(auth)
         }
 
     }
